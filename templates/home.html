@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Straw Hat Pirates</title>
+    <link rel="shortcut icon " type="image/png" href="../static/images/straw_hat.png" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <style>
+        @media (min-width: 780px) {
+            .page {
+                font-size: 1.2rem;
+            }
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url("../static/images/straw_hat_bounties.jpg");
+            background-position: right;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body class="page">
+    <div class="navbar">
+        <img src="/static/images/One_Piece_Logo.svg" width=230px height=120px>
+    </div>
+    <div class="left-container " id="straw hats pirates">
+        <!-- Jinja syntax is used to loop through the data-->
+        <div class="lists " id="category ">
+            {%for mugiwara_crew in name.keys()%}
+            <!-- the name of the character is printed first -->
+            <h1 class="mugiwara ">
+                {{mugiwara_crew}}</h1>
+            <!-- The images of the character are named same as of the name of character to make it easy to initialize -->
+            <img src="{{url_for( 'static',filename='images/{}.jpg' .format(mugiwara_crew))}} " width=100% height=100% alt="one piece "> {%for bio,data in name[mugiwara_crew].items()%}
+            <div class="bio ">
+                <h4>{{"{}:{} ".format(bio,data)}}</h4>
+            </div>
+            {%endfor%} {%endfor%}
+        </div>
+    </div>
+    <div class="continued">
+        <img src="../static/images/endless.jpg" width="100%" height="100%">
+    </div>
+
+</body>
+
+</html>
