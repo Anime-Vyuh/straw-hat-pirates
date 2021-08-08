@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    position: relative;
+}
+
+.left-container {
+    width: 28.5%;
+    float: left;
+    color: black;
+    justify-content: center;
+    text-align: left;
+}
+
+.lists {
+    background-color: rgb(98, 179, 211);
+}
+
+.mugiwara {
+    text-align: center;
+    color: #fa0000;
+    background-color: #ffee00;
+    justify-content: center;
+}
+
+.bio {
+    font-weight: 900;
+    font-style: italic;
+}
+
+.continued {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
